@@ -29,3 +29,20 @@ To get more relevant answers, increase the `n_sources` parameter (default is 2)
 ```
 python query_bytewax.py -n 3
 ```
+
+## Example
+
+    Enter query: How can I emit a state after each change or update for a given key
+    INFO:root:> [query] Total LLM token usage: 1453 tokens
+    INFO:root:> [query] Total embedding token usage: 15 tokens
+
+    To emit a state after each change or update for a given key, you can use a
+    stateful map function. This function will take in the key and the new state,
+    and then emit the updated state for that key. For example, in the code
+    snippet provided, the stateful map function "order_book" is used to update
+    the OrderBook object with the new state and then emit the updated state for
+    that key. Additionally, the code will check if the order should be removed
+    and if not it will update the order. If the order was removed, it will check
+    to make sure the bid and ask prices are modified if required. Finally, the
+    `capture` operator is used to use the output builder function that was
+    defined earlier and print out the output to the terminal.
